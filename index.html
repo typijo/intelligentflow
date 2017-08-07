@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="flow.js"></script>
+  <script src="optimizer.js"></script>
+</head>
+<body onload="init()">
+  <section>
+  <h1>Intelligent Flow</h1>
+  <div id="map"></div>
+  </section>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUjo46fMcj8msfHC2WB0IgluXMuuDOMms&callback=flow" async defer></script>
+
+
+<div id="data">
+  Source : water coming <input id="f_s"/> <br>
+  Source to branch : <input id="lc_sb"/> / <input id="lm_sb"/> rainfall <input id="rf_sb"/> <br>
+  Branch to gate1 : <input id="lc_bg1"/> / <input id="lm_bg1"/> rainfall <input id="rf_bg1"/> <br>
+  Branch to gate2 : <input id="lc_bg2"/> / <input id="lm_bg2"/> rainfall <input id="rf_bg2"/> <br>
+  Gate1 valve : <input id="beta_g1"/> <br>
+  Gate2 valve : <input id="beta_g2"/> <br>
+  Gate1 to merge: <input id="lc_g1m"/> / <input id="lm_g1m"/> rainfall <input id="rf_g1m"/> <br>
+  Gate2 to merge: <input id="lc_g2m"/> / <input id="lm_g2m"/> rainfall <input id="rf_g2m"/> <br>
+  Merge to sea : <input id="lc_m"/> / <input id="lm_m"/> rainfall <input id="rf_m"/>
+</div>
+<button onclick="timeshift()">next</button>
+</body>
+</html>
